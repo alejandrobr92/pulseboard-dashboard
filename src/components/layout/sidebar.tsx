@@ -8,11 +8,11 @@ export default function Sidebar() {
     const pathname = usePathname();
 
     return (
-        <aside className="w-64 p-6 flex flex-col gap-8 h-full bg-white border-r border-r-gray-200">
+        <aside className="w-64 p-6 flex flex-col gap-8 h-full transition-colors bg-white border-r border-r-gray-200">
             <h2 className="text-xl font-semibold">PulseBoard</h2>
             <nav className="flex flex-col gap-2">
                 {navigationItems.map((item) => {
-                    const isActive = pathname === item.href;
+                    const isActive = pathname.startsWith(item.href);
                     return (
                         <Link
                             href={item.href}

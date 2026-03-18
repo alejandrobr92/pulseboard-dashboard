@@ -7,7 +7,11 @@ export const metadata: Metadata = {
   description: "Real-time team analytics dashboard",
 };
 
-export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
+type RootLayoutProps = Readonly<{
+  children: ReactNode;
+}>;
+
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en">
       <body className={`min-h-screen bg-green-100 text-gray-800`}>

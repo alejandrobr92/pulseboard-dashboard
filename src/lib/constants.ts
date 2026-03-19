@@ -1,4 +1,4 @@
-import { NavItem } from "@/types/types";
+import { NavItem } from "@/types/dashboard";
 
 export const navigationItems: NavItem[] = [
     { label: 'Dashboard', href: '/dashboard' },

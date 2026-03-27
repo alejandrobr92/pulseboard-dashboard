@@ -1,8 +1,9 @@
 "use client";
 import Card from "@/components/ui/Card";
 import { useMetrics } from "@/features/dashboard/api/useMetrics";
+import { JSX } from "react";
 
-export default function Dashboard() {
+export default function Dashboard(): JSX.Element {
     const { data, isLoading, error } = useMetrics();
 
     if (isLoading) return <div>Loading...</div>

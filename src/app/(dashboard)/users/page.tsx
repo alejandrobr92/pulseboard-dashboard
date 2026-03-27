@@ -1,3 +1,11 @@
+'use client'
+import { useUsers } from "@/features/users/api/useUsers"
+import UserTable from "@/features/users/components/UserTable";
+
 export default function Users() {
-    return <div>Users</div>
+    const { data, isLoading } = useUsers();
+
+    if (isLoading) return <div>...loading</div>
+
+    return <UserTable data={data ?? []} />
 }

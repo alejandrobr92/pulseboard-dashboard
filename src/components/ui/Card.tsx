@@ -6,7 +6,7 @@ type CardProps = {
 }
 
 export default function Card({ children, className }: CardProps): JSX.Element {
-    return <div className={`bg-white p-4 rounded-lg shadow ${className ?? ''} `}>
+    return <div className={`bg-white p-4 rounded-lg shadow ${className || ''} `}>
         {children}
     </div>
 }
